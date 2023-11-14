@@ -65,7 +65,10 @@
 }
 
 .left-area img {
-	width: 70%;
+	width: 160px;
+	height: 160px;
+	object-fit: contain;
+	overflow: hidden;
     min-height: 60px;
     border-radius: 50%;
     border: 5px solid white;

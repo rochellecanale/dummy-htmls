@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Julie</title>
+	<style>
+		@page {
+			size: A4;
+			margin: 0;
+		}
+
+		@media print {
+
+			html,
+			body {
+				width: 210mm;
+				height: 297mm;
+			}
+		}
+
+		* {
+			margin: 0%;
+			padding: 0%;
+			box-sizing: border-box;
+			font-family: sans-serif;
+		}
+
+		.print-area {
+			width: 80%;
+		}
+
+		.print-area,
+		.header {
+			width: 100%;
+			min-height: 150px;
+			height: 100px;
+			background-color: #2d4a53;
+			display: flex;
+			align-items: center;
+			position: relative;
+		}
+
+		.header-text {
+			color: #190019;
+			width: 60%;
+			margin-left: auto;
+		}
+
+		.header-text h2 {
+			font-size: 60px;
+			font-weight: normal;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+		}
+
+		.header-text p {
+			font-size: 20px;
+			color: lightgray;
+		}
+
+		.contents {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: start;
+		}
+
+		.left-area,
+		.right-area {}
+
+		.left-area {
+			min-height: calc(100vh - 100px);
+			width: 20%;
+			background: #ccc;
+			text-align: center;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: relative;
+		}
+
+		.left-area img {
+			width: 200px;
+			height: 200px;
+			min-height: 200px;
+			border-radius: 50%;
+			border: 5px solid white;
+			box-shadow: 3px 3px 10px rgb(0, 0, 0, .5);
+			cursor: pointer;
+			transition: .5s;
+			background: #fff;
+			position: absolute;
+			top: -120px;
+			overflow: hidden;
+			object-fit: contain;
+		}
+
+		.left-area img:hover {
+			transform: scale(1.05);
+			box-shadow: 3px 3px 20px rgb(0, 0, 0, .5);
+		}
+
+		.right-area {
+			min-height: calc(100vh - 100px);
+			min-height: 100px;
+			width: 80%;
+			padding: 10px;
+		}
+
+
+		.contents .left-area .contact-area h3 {
+			margin-top: 100px;
+			font-size: 32px;
+			text-transform: uppercase;
+		}
+
+		.contents .left-area .contact-area .details {
+			margin-top: 10px;
+		}
+
+		.contact-area .details h4 {
+			font-size: 20px;
+			font-weight: 700;
+			font-family: inherit;
+		}
+
+		.contact-area .hobbies h4 {
+			font-size: 20px;
+			font-weight: 700;
+			font-family: inherit;
+			margin-top: 30px;
+		}
+
+		.contact-area .hobbies ul {
+			list-style: none;
+		}
+
+		.contact-area .details p {
+			margin-bottom: 10px;
+			font-size: 18px;
+			font-weight: normal;
+			font-family: inherit;
+		}
+
+		.right-area {
+			padding: 50px 100px;
+
+		}
+
+		.right-area .about-me h3,
+		.right-area .work-experience h3 {
+			font-size: 50px;
+			margin-bottom: 20px;
+			color: #2c2c2c;
+		}
+
+		.right-area .about-me p,
+		.right-area .work-experience p {
+			font-size: 18;
+			color: #505050;
+			width: 80%;
+		}
+
+		.right-area .work-experience {
+			margin-top: 30px;
+		}
+
+		.right-area .work-experience table {
+			width: 100%;
+			margin-top: 30px;
+		}
+
+		.right-area .work-experience tr td {
+			padding: 10px;
+		}
+
+		.right-area .work-experience tr.titles td:first-child {
+			font-size: 24px;
+			font-weight: 700;
+		}
+
+		.right-area .work-experience tr.titles td:last-child {
+			font-size: 18px;
+			font-weight: 700;
+			text-align: right;
+		}
+
+		.right-area .work-experience tr.contents {}
+
+		.right-area .work-experience tr.contents td:first-child {
+			font-size: 16px;
+			color: #ccc;
+		}
+
+		.right-area .work-experience tr.contents td:last-child {}
+	</style>
+</head>
+
+<body>
+	<div class="print-area">
+		<div class="header">
+			<div class="header-text">
+				<h2>Julie Ann T. Baclili</h2>
+				<p>Student of Nueva Ecija University of Science and Technology</p>
+				<button id="print-me">Print Me</button>
+			</div>
+		</div>
+	</div>
+
+	<div class="contents">
+		<div class="left-area">
+			<img src='./mypic.jpg' alt="Im so gorgeous" />
+			<div class="contact-area">
+				<h3>Contact</h3>
+
+				<div class="details">
+					<h4>Phone</h4>
+					<p>0967-2745-736</p>
+
+					<h4>Email</h4>
+					<p>julieannbaclili@gmail.com</p>
+
+					<h4>Home</h4>
+					<p>Purok 5 Sta Maria Licab Nueva Ecija</p>
+				</div>
+
+				<div class="hobbies">
+					<h4>HOBBIES</h4>
+					<ul>
+						<li>Reading</li>
+						<li>Playing online games</li>
+						<li>Listening to music</li>
+						<li>Surfing in social media</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="right-area">
+			<div class="about-me">
+				<h3>ABOUT ME</h3>
+				<p>I'm Julie Ann Tamayo Baclili, you can call me Julie. I am 19 years old. I was born on July 14, 2004.
+					There are five people in my family. My father, mother, siblings and me the youngest one.
+					When I was in grade school I study at Sta Maria Elementary School(SMES), in high school I study and
+					graduated at Sta Maria National High School(SMNHS). <br /><br />
+					Now Im in 2nd year college at Nueva Ecija University of Science and Technolgy Sto Domingo
+					Campus(NEUST-SDC)
+					with the course of Bachelor in Science and Technology.</p><br />
+				<p>I like animals specially dogs and cats. I like listening to music like R&B, rap, alternative rock,
+					pop. </p>
+			</div>
+			<div class="work-experience">
+				<h3>WORK EXPERIENCE</h3>
+				<table>
+					<tbody>
+						<tr class="titles">
+							<td>LEAD WEB DESIGNER<p>ER4 COLLEGE</p>
+							</td>
+							<td>2014/2016</td>
+						</tr>
+						<tr class="contents">
+							<td colspan="2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic sunt fugit
+								magnam consequatur accusantium excepturi laborum ullam ratione praesentium nam, fuga
+								rerum at impedit alias vel nesciunt architecto quae quas?</td>
+						</tr>
+
+						<tr class="titles">
+							<td>SENIOR WEB DESIGNER<p>ER4 COLLEGE</p>
+							</td>
+							<td>2014/2016</td>
+						</tr>
+						<tr class="contents">
+							<td colspan="2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic sunt fugit
+								magnam consequatur accusantium excepturi laborum ullam ratione praesentium nam, fuga
+								rerum at impedit alias vel nesciunt architecto quae quas?</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
