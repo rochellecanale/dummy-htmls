@@ -2,6 +2,8 @@
 	size: A4
 }
 
+body {-webkit-print-color-adjust: exact;}
+
 * {
 	margin: 0%;
 	padding: 0%;
