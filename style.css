@@ -1,0 +1,182 @@
+@page {
+	size: A4
+}
+
+* {
+	margin: 0%;
+	padding: 0%;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.print-area {
+	width: 80%;
+}
+
+.print-area,
+.header {
+	width: 100%;
+	min-height: 150px;
+	height: 100px;
+	background-color: #2d4a53;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.header-text {
+	color: #190019;
+	width: 60%;
+	margin-left: auto;
+}
+
+.header-text h2 {
+	font-size: 30px;
+	color: #fff;
+	font-weight: normal;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.header-text p {
+	font-size: 14px;
+	color: lightgray;
+	margin-bottom: 10px;
+}
+
+.contents {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+}
+
+.left-area,
+.right-area {}
+
+.left-area {
+	min-height: calc(100vh - 100px);
+	width: 30%;
+	background: #ccc;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.left-area img {
+	width: 70%;
+    min-height: 60px;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 3px 3px 10px rgb(0, 0, 0, .5);
+    cursor: pointer;
+    transition: .5s;
+    background: #fff;
+    position: absolute;
+    top: -90px;
+    left: 30px;
+}
+
+.left-area img:hover {
+	transform: scale(1.05);
+	box-shadow: 3px 3px 20px rgb(0, 0, 0, .5);
+}
+
+.right-area {
+	min-height: calc(100vh - 100px);
+	min-height: 100px;
+	width: 70%;
+	padding: 10px;
+}
+
+
+.contents .left-area .contact-area h3 {
+	margin-top: 100px;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.contents .left-area .contact-area .details {
+	margin-top: 10px;
+}
+
+.contact-area .details h4 {
+	font-size: 16px;
+	font-weight: 700;
+	font-family: inherit;
+}
+
+.contact-area .hobbies h4 {
+	font-size: 16px;
+	font-weight: 700;
+	font-family: inherit;
+	margin-top: 30px;
+}
+
+.contact-area .hobbies ul {
+	list-style: none;
+}
+
+.contact-area .hobbies ul li {
+	font-size: 12px;
+}
+
+.contact-area .details p {
+	margin-bottom: 10px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: inherit;
+}
+
+.right-area {
+	padding: 30px;
+
+}
+
+.right-area .about-me h3,
+.right-area .work-experience h3 {
+	font-size: 30px;
+	margin-bottom: 20px;
+	color: #2c2c2c;
+}
+
+.right-area .about-me p,
+.right-area .work-experience p {
+	font-size: 14px;
+	color: #505050;
+	width: 80%;
+}
+
+.right-area .work-experience {
+	margin-top: 30px;
+}
+
+.right-area .work-experience table {
+	width: 100%;
+	margin-top: 30px;
+}
+
+.right-area .work-experience tr td {
+	padding: 10px;
+}
+
+.right-area .work-experience tr.titles td:first-child {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.right-area .work-experience tr.titles td:last-child {
+	font-size: 18px;
+	font-weight: 700;
+	text-align: right;
+}
+
+.right-area .work-experience tr.contents {}
+
+.right-area .work-experience tr.contents td:first-child {
+	font-size: 16px;
+	color: #ccc;
+}
+
+.right-area .work-experience tr.contents td:last-child {}
